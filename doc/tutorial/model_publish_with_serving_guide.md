@@ -1,6 +1,6 @@
 # Guide to FATE Model Publishing & Federated Online Inference
 
-# 1. Overview
+## 1. Overview
 
 1.1 Highly usable Federated Online Inference service is provided by FATE-Serving, a sub-project of FederatedAI, repository: https://github.com/FederatedAI/FATE-Serving
 
@@ -8,13 +8,13 @@
 
 1.3 Federated Online Inference service support HTTP/GRPC online inference API
 
-# 2. Cluster Deploy
+## 2. Cluster Deploy
 
 Offline Cluster for Training(FATE), please refer to: https://github.com/FederatedAI/FATE/tree/master/cluster-deploy/doc
 
 Online Cluster for Inference(FATE-Serving)，please refer to: https://github.com/FederatedAI/FATE-Serving/wiki
 
-# 3. Configuration of Offline Cluster & Online Cluster with/without ZooKeeper (two different modes)
+## 3. Configuration of Offline Cluster & Online Cluster with/without ZooKeeper (two different modes)
 
 configuration: conf/service_conf.yaml
 
@@ -58,7 +58,7 @@ zookeeper:
 
 - Refer to the deploy document on offline cluster for training to restart FATE-Flow service
 
-# 4. Load Model
+## 4. Load Model
 
 Copy and modify configuration file fate_flow/examples/publish_load_model.json under deploy directory, which is used to generate *load configuration* for corresponding model
 Example of modified configuration:
@@ -91,7 +91,7 @@ Run command:
 python fate_flow_client.py -f load -c examples/publish_load_model.json
 ```
 
-# 5. Publish Model
+## 5. Publish Model
 
 Copy and modify configuration file fate_flow/examples/bind_model_service.json under deploy directory, which is used to generate *bind configuration* for corresponding model
 Example of modified configuration:
@@ -131,7 +131,7 @@ Run command:
 python fate_flow_client.py -f bind -c examples/bind_model_service.json
 ```
 
-# 6. Testing Online Inference
+## 6. Testing Online Inference
 
 Please refer to [FATE-Serving document](https://github.com/FederatedAI/FATE-Serving/wiki/%E5%9C%A8%E7%BA%BF%E6%8E%A8%E7%90%86%E6%8E%A5%E5%8F%A3%E8%AF%B4%E6%98%8E)
 Fill in parameter ``service_id`` according to step 5 above. 
